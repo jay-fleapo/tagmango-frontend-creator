@@ -3,7 +3,6 @@
 **/yarn.lock
 **/.env
 **/dist
-# next.js
-/.next/
-# production
-/build
+.next/
+.swc/
+.*.env
