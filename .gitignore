@@ -3,4 +3,7 @@
 **/yarn.lock
 **/.env
 **/dist
-next/static/chunks/
+# next.js
+/.next/
+# production
+/build
