@@ -1,0 +1,12 @@
+.task-page :global {
+  .task-count-wrapper {
+    .card {
+      h3 {
+        font-weight: 600;
+        font-size: 32px;
+        color: #212121;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
