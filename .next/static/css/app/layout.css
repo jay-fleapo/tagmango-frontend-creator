@@ -293,7 +293,7 @@ p {
   background-color: #0f2137 !important;
 }
 .site-btn.dark-btn span {
-  color: #fff;
+  color: #fff !important;
 }
 .site-btn.gray-btn {
   background-color: #e4e6eb !important;

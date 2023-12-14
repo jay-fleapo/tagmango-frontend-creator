@@ -36,7 +36,6 @@ export const AddCharity = () => {
             <Col span={24}>
               <FormInput placeholder='' lable='Organisation Name' type='text' />
             </Col>
-
             <Col span={24}>
               <Flex gap='middle' justify='end'>
                 <PrimaryButton variant='secondary' text='Cancel' />

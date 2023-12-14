@@ -29,3 +29,18 @@
     }
   }
 }
+
+.quizzes-page :global {
+  .select-quizzes-card-wrapper {
+    h5.ant-typography {
+      line-height: 15px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #424242;
+      margin-bottom: 20px;
+    }
+    .site-btn {
+      width: 100%;
+    }
+  }
+}

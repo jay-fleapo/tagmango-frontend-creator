@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'antd';
 
 interface ButtonProps {
-  text: string;
+  text: React.ReactNode;
   variant: 'primary' | 'secondary' | 'info' | 'dark';
   onClick?: () => void;
 }
