@@ -1,10 +1,13 @@
+'use client';
+
 import React from 'react';
 import { Quizzes } from '../../../view/quizzes';
 
-export const QuizzesPages = () => {
+const QuizzesPages = () => {
   return (
     <>
       <Quizzes />
     </>
   );
 };
+export default QuizzesPages;

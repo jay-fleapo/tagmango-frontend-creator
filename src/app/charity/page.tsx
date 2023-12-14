@@ -1,10 +1,13 @@
+'use client';
+
 import React from 'react';
 import { Charity } from '../../../view/charity';
 
-export const CharityPage = () => {
+const CharityPage = () => {
   return (
     <>
       <Charity />
     </>
   );
 };
+export default CharityPage;

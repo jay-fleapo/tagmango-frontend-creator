@@ -1,10 +1,13 @@
+'use client';
+
 import React from 'react';
 import { Task } from '../../../view/tasks';
 
-export const TaskPage = () => {
+const TaskPage = () => {
   return (
     <>
       <Task />
     </>
   );
 };
+export default TaskPage;

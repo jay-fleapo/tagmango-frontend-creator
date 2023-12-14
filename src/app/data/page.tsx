@@ -1,10 +1,13 @@
+'use client';
+
 import React from 'react';
 import { Data } from '../../../view/data';
 
-export const DataPage = () => {
+const DataPage = () => {
   return (
     <>
       <Data />
     </>
   );
 };
+export default DataPage;
