@@ -1,15 +1,15 @@
 'use client';
 
-import { Data } from '../../view/data';
-import { AddData } from '../../view/data/adddata';
-import { CreateTask } from '../../view/tasks/createtask';
-import { DataPage } from './pages/data';
-import { TaskPage } from './pages/task';
+import Dashboard from '../../view/dashboard';
+import { CharityPage } from './pages/charity';
+import { EventsPage } from './pages/events';
 
 export default function Home() {
   return (
     <>
-      <CreateTask />
+      <Dashboard>
+        <EventsPage />
+      </Dashboard>
     </>
   );
 }

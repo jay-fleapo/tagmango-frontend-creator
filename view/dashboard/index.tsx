@@ -1,7 +1,7 @@
 'use client';
 
 import type { MenuProps } from 'antd';
-
+import style from '../../style/dashboard.module.scss';
 import { Layout, Space, Menu, Button } from 'antd';
 
 const { Header, Sider, Content } = Layout;
@@ -30,11 +30,9 @@ const items: MenuItem[] = [
     getItem('Habits', '3'),
     getItem('Tasks', '4'),
   ]),
-  getItem('Data', 'sub2', <TeamOutlined />, [
-    getItem('Data 1', '6'),
-    getItem('Data 2', '8'),
-  ]),
-  getItem('Events', '9', <FileOutlined />),
+  getItem('Data', '2', <FileOutlined />),
+  getItem('Charity', '6', <FileOutlined />),
+  getItem('Quizzes', '7', <FileOutlined />),
 ];
 
 const headerStyle: React.CSSProperties = {
@@ -46,25 +44,6 @@ const headerStyle: React.CSSProperties = {
   backgroundColor: '#fff',
 };
 
-const siderStyle: React.CSSProperties = {
-  height: '100dvh',
-  textAlign: 'center',
-  lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#fff',
-  overflow: 'auto',
-  position: 'fixed',
-  left: 0,
-  top: 0,
-  bottom: 0,
-};
-
-const footerStyle: React.CSSProperties = {
-  textAlign: 'center',
-  color: '#fff',
-  backgroundColor: '#7dbcea',
-};
-
 interface Props {
   children: React.ReactNode;
 }
@@ -72,32 +51,26 @@ interface Props {
 export default function Dashboard(props: Props) {
   return (
     <>
-      <Space direction='vertical' style={{ width: '100%' }}>
-        <Layout
-          style={{
-            width: '100%',
-            height: '100%',
-            minHeight: '100dvh',
-            background: '#eff2f5',
-          }}
-        >
-          <Sider style={siderStyle} width={250}>
-            <Menu defaultSelectedKeys={['1']} mode='inline' items={items} />
-          </Sider>
-          <Layout style={{ marginLeft: 250 }}>
-            <Header style={headerStyle}>Header</Header>
-            <Content
-              style={{
-                padding: '16px 15px',
-                overflow: 'initial',
-              }}
-            >
-              {props.children}
-            </Content>
-            {/* <Footer style={footerStyle}>Footer</Footer> */}
+      <div className={`${style['dashboard-wrapper']}`}>
+        <Space direction='vertical' style={{ width: '100%' }}>
+          <Layout className='main-layout'>
+            <Sider className='sidebar-main'>
+              <div className='inner-sidebar'>
+                <Menu
+                  defaultSelectedKeys={['1']}
+                  mode='inline'
+                  items={items}
+                  className='sidebar-menu'
+                  style={{ padding: '0 8px' }}
+                />
+              </div>
+            </Sider>
+            <Layout className='main-contain-layout'>
+              <Content>{props.children}</Content>
+            </Layout>
           </Layout>
-        </Layout>
-      </Space>
+        </Space>
+      </div>
     </>
   );
 }

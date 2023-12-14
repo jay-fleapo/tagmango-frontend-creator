@@ -10,3 +10,22 @@
     }
   }
 }
+
+.charity-page :global {
+  .charity-table {
+    .filter-wrapper {
+      margin-bottom: 15px;
+      .form-group {
+        margin-bottom: 0;
+      }
+      .filter-by {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        & > div {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

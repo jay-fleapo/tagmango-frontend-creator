@@ -14,16 +14,15 @@ export const FormSelect = (props: Props) => {
   return (
     <div>
       <div className='form-group'>
-        <label htmlFor='label'>{props.lable}</label>
+        {props.lable ? <label htmlFor='label'>{props.lable}</label> : ''}
+
         <Select
           defaultValue='Select'
           style={{ width: '100%', height: '42px' }}
           onChange={handleChange}
           options={[
-            { value: 'jack', label: 'Jack' },
-            { value: 'lucy', label: 'Lucy' },
-            { value: 'Yiminghe', label: 'yiminghe' },
-            { value: 'disabled', label: 'Disabled', disabled: true },
+            { value: 'test', label: 'Option 1' },
+            { value: 'option', label: 'Option 2' },
           ]}
         />
       </div>

@@ -3,11 +3,13 @@ import { Button } from 'antd';
 
 interface ButtonProps {
   text: string;
-  variant: 'primary' | 'secondary' | 'info';
+  variant: 'primary' | 'secondary' | 'info' | 'dark';
   onClick?: () => void;
 }
 
 export const PrimaryButton = ({ text, variant, onClick }: ButtonProps) => {
+  const ChangeType = variant === 'primary' ? 'primary' : 'text';
+
   let buttonClass = '';
   let InfoIcon = null;
 
@@ -37,7 +39,7 @@ export const PrimaryButton = ({ text, variant, onClick }: ButtonProps) => {
   }
 
   switch (variant) {
-    case 'primary':
+    case 'dark':
       buttonClass = 'site-btn dark-btn';
       break;
 
@@ -50,12 +52,12 @@ export const PrimaryButton = ({ text, variant, onClick }: ButtonProps) => {
       break;
 
     default:
-      buttonClass = 'site-btn dark-btn';
+      buttonClass = 'site-btn';
   }
 
   return (
     <>
-      <Button type='text' className={buttonClass} onClick={onClick}>
+      <Button type={ChangeType} className={buttonClass} onClick={onClick}>
         {InfoIcon}
         {text}
       </Button>

@@ -4,7 +4,7 @@ import '../../style/global.scss';
 import { ConfigProvider } from 'antd';
 
 const poppins = Poppins({
-  weight: ['400', '600', '700'],
+  weight: ['400', '500', '600', '700'],
   style: ['normal'],
   subsets: ['latin'],
   display: 'swap',
@@ -31,6 +31,10 @@ export default function RootLayout({
               colorText: 'rgba(0,0,0,.85)',
             },
             components: {
+              Menu: {
+                itemSelectedBg: 'hsl(29,87.9%,90%)',
+                itemBorderRadius: 6,
+              },
               Input: {
                 colorBorder: '#ced0d4',
                 borderRadius: 4,
