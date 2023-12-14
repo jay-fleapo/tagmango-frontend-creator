@@ -33,7 +33,7 @@ export const Data = () => {
           <Col span={12}>
             <PageTitle title='Data' />
           </Col>
-          <Col span={12} style={{ textAlign: 'right' }}>
+          <Col span={12} style={{ display: 'flex', justifyContent: 'end' }}>
             <PrimaryButton text='Add Data' variant='dark' />
           </Col>
         </Row>

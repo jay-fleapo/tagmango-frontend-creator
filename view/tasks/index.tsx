@@ -36,7 +36,7 @@ export const Task = () => {
           <Col span={12}>
             <PageTitle title='Tasks' />
           </Col>
-          <Col span={12} style={{ textAlign: 'right' }}>
+          <Col span={12} style={{ display: 'flex', justifyContent: 'end' }}>
             <PrimaryButton text='New Task' variant='dark' />
           </Col>
         </Row>
@@ -59,7 +59,7 @@ export const Task = () => {
             ].map((ele, i) => (
               <Col key={i} span={6}>
                 <PrimaryCard title={ele.taskName}>
-                  <h3>{ele.count}</h3>
+                  <h3 style={{ margin: 0 }}>{ele.count}</h3>
                 </PrimaryCard>
               </Col>
             ))}

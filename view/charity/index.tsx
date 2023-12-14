@@ -130,7 +130,7 @@ export const Charity = () => {
           <Col span={12}>
             <PageTitle title='Charity' />
           </Col>
-          <Col span={12} style={{ textAlign: 'right' }}>
+          <Col span={12} style={{ display: 'flex', justifyContent: 'end' }}>
             <PrimaryButton text='Add Data' variant='dark' />
           </Col>
         </Row>
