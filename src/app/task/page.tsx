@@ -2,11 +2,14 @@
 
 import React from 'react';
 import { Task } from '../../../view/tasks';
+import Dashboard from '../dashboard/page';
 
 const TaskPage = () => {
   return (
     <>
-      <Task />
+      <Dashboard>
+        <Task />
+      </Dashboard>
     </>
   );
 };

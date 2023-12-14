@@ -2,11 +2,14 @@
 
 import React from 'react';
 import { Quizzes } from '../../../view/quizzes';
+import Dashboard from '../dashboard/page';
 
 const QuizzesPages = () => {
   return (
     <>
-      <Quizzes />
+      <Dashboard>
+        <Quizzes />
+      </Dashboard>
     </>
   );
 };

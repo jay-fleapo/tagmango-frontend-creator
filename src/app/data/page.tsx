@@ -2,11 +2,14 @@
 
 import React from 'react';
 import { Data } from '../../../view/data';
+import Dashboard from '../dashboard/page';
 
 const DataPage = () => {
   return (
     <>
-      <Data />
+      <Dashboard>
+        <Data />
+      </Dashboard>
     </>
   );
 };
