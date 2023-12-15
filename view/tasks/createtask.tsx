@@ -7,7 +7,6 @@ import PageTitle from '../../components/pagetitle';
 import { PrimaryButton } from '../../components/common/button';
 import { FormInput } from '../../components/form/input';
 import { FormSelect } from '../../components/form/select';
-import Dashboard from '../dashboard';
 
 export const CreateTask = () => {
   const [value, setValue] = useState(1);
@@ -32,9 +31,9 @@ export const CreateTask = () => {
         <div className='gray-box p-15'>
           <Row>
             <Col span={24}>
-              <FormSelect lable='Category' />
+              <FormSelect label='Category' />
               <FormInput
-                lable='Title'
+                label='Title'
                 placeholder='E.g. Finish gamification'
                 type='text'
               />
@@ -53,20 +52,20 @@ export const CreateTask = () => {
               </div>
               {/* Check One Time */}
               <div>
-                <FormInput lable='Date' type='date' />
-                <FormInput lable='Time' type='time' />
+                <FormInput label='Date' type='date' />
+                <FormInput label='Time' type='time' />
               </div>
               {/* Recurring */}
               <div>
                 <Row gutter={24}>
                   <Col span={12}>
-                    <FormInput lable='Start date' type='date' />
+                    <FormInput label='Start date' type='date' />
                   </Col>
                   <Col span={12}>
-                    <FormInput lable='End Date' type='date' />
+                    <FormInput label='End Date' type='date' />
                   </Col>
                 </Row>
-                <FormInput lable='Time' type='time' />
+                <FormInput label='Time' type='time' />
                 <div className='form-group'>
                   <Row style={{ display: 'flex', alignItems: 'center' }}>
                     <label htmlFor='type' style={{ marginRight: '30px' }}>
@@ -84,10 +83,10 @@ export const CreateTask = () => {
                 </div>
                 <Row gutter={24}>
                   <Col span={12}>
-                    <FormInput lable='First day of the Week' type='date' />
+                    <FormInput label='First day of the Week' type='date' />
                   </Col>
                   <Col span={12}>
-                    <FormInput lable='Second day of the Week' type='week' />
+                    <FormInput label='Second day of the Week' type='week' />
                   </Col>
                 </Row>
               </div>

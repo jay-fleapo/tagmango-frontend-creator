@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { useRouter } from 'next/navigation';
 import style from '../../style/task.module.scss';
 import { Row, Col } from 'antd';
 import type { RadioChangeEvent } from 'antd';
@@ -21,6 +22,13 @@ export const Data = () => {
     console.log('radio checked', e.target.value);
     setValue(e.target.value);
   };
+
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    router.push('/data/adddata');
+  };
+
   return (
     <>
       <div className={`${style['task-page']} common-panel-wrapper`}>
@@ -34,7 +42,11 @@ export const Data = () => {
             <PageTitle title='Data' />
           </Col>
           <Col span={12} style={{ display: 'flex', justifyContent: 'end' }}>
-            <PrimaryButton text='Add Data' variant='dark' />
+            <PrimaryButton
+              text='Add Data'
+              variant='dark'
+              onClick={handleButtonClick}
+            />
           </Col>
         </Row>
 

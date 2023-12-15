@@ -2,14 +2,14 @@
 
 import React from 'react';
 import { Events } from '../../../view/events';
-import Dashboard from '../dashboard/page';
+import PageLayout from '../layout/page';
 
 export const EventsPage = () => {
   return (
     <>
-      <Dashboard>
+      <PageLayout>
         <Events />
-      </Dashboard>
+      </PageLayout>
     </>
   );
 };

@@ -2,14 +2,14 @@
 
 import React from 'react';
 import { Charity } from '../../../view/charity';
-import Dashboard from '../dashboard/page';
+import PageLayout from '../layout/page';
 
 const CharityPage = () => {
   return (
     <>
-      <Dashboard>
+      <PageLayout>
         <Charity />
-      </Dashboard>
+      </PageLayout>
     </>
   );
 };

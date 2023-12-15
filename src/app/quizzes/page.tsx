@@ -2,14 +2,14 @@
 
 import React from 'react';
 import { Quizzes } from '../../../view/quizzes';
-import Dashboard from '../dashboard/page';
+import PageLayout from '../layout/page';
 
 const QuizzesPages = () => {
   return (
     <>
-      <Dashboard>
+      <PageLayout>
         <Quizzes />
-      </Dashboard>
+      </PageLayout>
     </>
   );
 };

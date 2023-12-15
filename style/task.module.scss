@@ -32,15 +32,52 @@
 
 .quizzes-page :global {
   .select-quizzes-card-wrapper {
-    h5.ant-typography {
-      line-height: 15px;
-      font-size: 15px;
-      font-weight: 500;
+    .ant-card-head-title {
       color: #424242;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    h5.ant-typography {
+      margin-top: 10px;
+      line-height: 14px;
+      font-size: 14px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.45);
       margin-bottom: 20px;
     }
     .site-btn {
       width: 100%;
+    }
+  }
+}
+
+.charity-page :global {
+  .complete-you-tasks-cards {
+    .strike-check-box {
+      .ant-checkbox-wrapper {
+        & > span:first-child {
+          align-self: flex-start;
+          margin-top: 3px;
+        }
+        & > span:last-child {
+          line-height: normal;
+          vertical-align: baseline;
+        }
+      }
+    }
+  }
+}
+
+.habit-page :global {
+  .complete-you-tasks-cards {
+    .ant-card-extra {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+    h5 {
+      margin: 10px 0 15px 0;
     }
   }
 }

@@ -12,7 +12,7 @@ const onChange: DatePickerProps['onChange'] = (date, dateString) => {
 };
 
 interface Props {
-  lable?: string;
+  label?: string;
   type?:
     | 'search'
     | 'text'
@@ -32,7 +32,7 @@ export const FormInput = (props: Props) => {
   return (
     <>
       <div className='form-group'>
-        {props.lable ? <label htmlFor='label'>{props.lable}</label> : ''}
+        {props.label ? <label htmlFor='label'>{props.label}</label> : ''}
 
         {props.type === 'date' ? (
           <DatePicker
@@ -42,18 +42,15 @@ export const FormInput = (props: Props) => {
         ) : props.type === 'time' ? (
           <TimePicker
             style={{ width: '100%', padding: '7.5px 12px' }}
-            onChange={onChange}
             defaultOpenValue={dayjs('00:00:00', 'HH:mm:ss')}
           />
         ) : props.type === 'month' ? (
           <DatePicker
-            onChange={onChange}
             picker='month'
             style={{ width: '100%', padding: '7.5px 12px' }}
           />
         ) : props.type === 'week' ? (
           <DatePicker
-            onChange={onChange}
             picker='week'
             style={{ width: '100%', padding: '7.5px 12px' }}
           />

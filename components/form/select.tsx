@@ -7,22 +7,24 @@ const handleChange = (value: string) => {
 };
 
 interface Props {
-  lable?: string;
+  label?: string;
 }
 
 export const FormSelect = (props: Props) => {
   return (
     <div>
       <div className='form-group'>
-        {props.lable ? <label htmlFor='label'>{props.lable}</label> : ''}
+        {props.label ? <label htmlFor='label'>{props.label}</label> : ''}
 
         <Select
-          defaultValue='Select'
+          defaultValue='lucy'
           style={{ width: '100%', height: '42px' }}
           onChange={handleChange}
           options={[
-            { value: 'test', label: 'Option 1' },
-            { value: 'option', label: 'Option 2' },
+            { value: 'jack', label: 'Jack' },
+            { value: 'lucy', label: 'Lucy' },
+            { value: 'Yiminghe', label: 'yiminghe' },
+            { value: 'disabled', label: 'Disabled', disabled: true },
           ]}
         />
       </div>

@@ -4,11 +4,10 @@ import style from '../../style/task.module.scss';
 import { Row, Col } from 'antd';
 import type { RadioChangeEvent } from 'antd';
 import { Typography, Tabs } from 'antd';
+import { useRouter } from 'next/router';
 
 import { CalendarTask } from './calendar';
-import { FormInput } from '../../components/form/input';
 import { TaskTable } from './tasktable';
-import Dashboard from '../dashboard';
 import { PrimaryCard } from '../../components/common/card';
 import PageTitle from '../../components/pagetitle';
 import { PrimaryButton } from '../../components/common/button';
@@ -24,6 +23,11 @@ export const Task = () => {
     console.log('radio checked', e.target.value);
     setValue(e.target.value);
   };
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    router.push('/task/addtask');
+  };
   return (
     <>
       <div className={`${style['task-page']} common-panel-wrapper`}>
@@ -37,7 +41,11 @@ export const Task = () => {
             <PageTitle title='Tasks' />
           </Col>
           <Col span={12} style={{ display: 'flex', justifyContent: 'end' }}>
-            <PrimaryButton text='New Task' variant='dark' />
+            <PrimaryButton
+              text='New Task'
+              variant='dark'
+              onClick={handleButtonClick}
+            />
           </Col>
         </Row>
         {/* Task Total Count Section */}

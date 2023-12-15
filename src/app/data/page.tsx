@@ -2,14 +2,14 @@
 
 import React from 'react';
 import { Data } from '../../../view/data';
-import Dashboard from '../dashboard/page';
+import PageLayout from '../layout/page';
 
 const DataPage = () => {
   return (
     <>
-      <Dashboard>
+      <PageLayout>
         <Data />
-      </Dashboard>
+      </PageLayout>
     </>
   );
 };

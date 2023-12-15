@@ -1,5 +1,6 @@
 'use client';
-import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import type { MenuProps } from 'antd';
 import style from '../../../style/dashboard.module.scss';
 import { Layout, Space, Menu } from 'antd';
@@ -59,9 +60,17 @@ interface Props {
   children: React.ReactNode;
 }
 
-export default function Dashboard(props: Props) {
-  // const router = useRouter();
-  // const selectedKeys = [router.pathname];
+export default function PageLayout(props: Props) {
+  const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
+  const currentPathname = usePathname();
+
+  useEffect(() => {
+    // Update selected key based on the current pathname
+    const key = items.find((item) => item.link === currentPathname)?.key;
+    if (key) {
+      setSelectedKeys([key]);
+    }
+  }, [currentPathname]);
   return (
     <>
       <div className={`${style['dashboard-wrapper']}`}>
@@ -71,7 +80,7 @@ export default function Dashboard(props: Props) {
               <div className='inner-sidebar'>
                 <Menu
                   defaultSelectedKeys={['1']}
-                  // selectedKeys={selectedKeys}
+                  selectedKeys={selectedKeys}
                   mode='inline'
                   className='sidebar'
                   style={{ padding: '0 8px' }}

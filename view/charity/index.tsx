@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+
 import { Col, Row, Table, Popover } from 'antd';
 import style from '../../style/task.module.scss';
-
+import { useRouter } from 'next/navigation';
 import PageTitle from '../../components/pagetitle';
 import { PrimaryButton } from '../../components/common/button';
 import { DisplayGraph } from '../../components/common/graph';
@@ -35,6 +36,13 @@ export const Charity = () => {
   const handlePopoverOpen = (index: number) => {
     setOpenPopoverIndex(index === openPopoverIndex ? null : index);
   };
+
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    router.push('/charity/addcharity');
+  };
+
   const columns: ColumnsType<DataType> = [
     {
       title: 'Date',
@@ -131,7 +139,11 @@ export const Charity = () => {
             <PageTitle title='Charity' />
           </Col>
           <Col span={12} style={{ display: 'flex', justifyContent: 'end' }}>
-            <PrimaryButton text='Add Data' variant='dark' />
+            <PrimaryButton
+              text='Add Data'
+              variant='dark'
+              onClick={handleButtonClick}
+            />
           </Col>
         </Row>
         <div className='gray-box p-15 charity-table'>
@@ -150,7 +162,7 @@ export const Charity = () => {
                       <label htmlFor='filter' style={{ marginBottom: 0 }}>
                         Filter by
                       </label>
-                      <FormSelect lable='' />
+                      <FormSelect />
                     </div>
                   </Col>
                   <Col span={8}>

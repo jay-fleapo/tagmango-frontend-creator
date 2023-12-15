@@ -1,5 +1,14 @@
 'use client';
 
+import { Dashboard } from '../../view/dashbaord';
+import PageLayout from './layout/page';
+
 export default function Home() {
-  return <>1</>;
+  return (
+    <>
+      <PageLayout>
+        <Dashboard />
+      </PageLayout>
+    </>
+  );
 }

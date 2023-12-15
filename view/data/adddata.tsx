@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 
 import { Col, Flex, Row } from 'antd';
@@ -24,39 +25,39 @@ export const AddData = () => {
             <Col span={24}>
               <FormInput
                 placeholder='Select Month'
-                lable='Month'
+                label='Month'
                 type='month'
               />
             </Col>
             <Col span={24}>
               <FormInput
                 placeholder=''
-                lable='Revenue Earned'
+                label='Revenue Earned'
                 icon={'₹'}
                 type='number'
               />
             </Col>
             <Col span={24}>
-              <FormInput lable='Ad Spends' icon={'₹'} type='number' />
+              <FormInput label='Ad Spends' icon={'₹'} type='number' />
             </Col>
             <Col span={24}>
               <FormInput
-                lable='Average Cost Per Lead'
+                label='Average Cost Per Lead'
                 icon={'₹'}
                 type='number'
               />
             </Col>
             <Col span={24}>
-              <FormInput lable='Total Leads Generated' />
+              <FormInput label='Total Leads Generated' />
             </Col>
             <Col span={24}>
-              <FormInput lable='Total Paid Customers' />
+              <FormInput label='Total Paid Customers' />
             </Col>
             <Col span={24}>
-              <FormInput lable='Total Group Size' type='number' />
+              <FormInput label='Total Group Size' type='number' />
             </Col>
             <Col span={24}>
-              <FormInput lable='ROAS' />
+              <FormInput label='ROAS' />
             </Col>
             <Col span={24}>
               <Flex gap='middle' justify='end'>

@@ -23,18 +23,18 @@ export const AddCharity = () => {
         <div className='gray-box p-15'>
           <Row gutter={[16, 0]}>
             <Col span={24}>
-              <FormSelect lable='Category' />
+              <FormSelect label='Category' />
             </Col>
             <Col span={24}>
               <FormInput
                 placeholder=''
-                lable='Amount Donated'
+                label='Amount Donated'
                 icon={'₹'}
                 type='number'
               />
             </Col>
             <Col span={24}>
-              <FormInput placeholder='' lable='Organisation Name' type='text' />
+              <FormInput placeholder='' label='Organisation Name' type='text' />
             </Col>
             <Col span={24}>
               <Flex gap='middle' justify='end'>
