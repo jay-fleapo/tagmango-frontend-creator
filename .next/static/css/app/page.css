@@ -68,38 +68,3 @@
   overflow-y: auto;
   padding: 0 15px;
 }
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./style/task.module.scss ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.task_task-page__TfaLP .task-count-wrapper .card h3 {
-  font-weight: 600;
-  font-size: 32px;
-  color: #212121;
-  margin-bottom: 0;
-}
-
-.task_charity-page__qiWel .charity-table .filter-wrapper {
-  margin-bottom: 15px;
-}
-.task_charity-page__qiWel .charity-table .filter-wrapper .form-group {
-  margin-bottom: 0;
-}
-.task_charity-page__qiWel .charity-table .filter-wrapper .filter-by {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.task_charity-page__qiWel .charity-table .filter-wrapper .filter-by > div {
-  width: 80%;
-}
-
-.task_quizzes-page__yl65x .select-quizzes-card-wrapper h5.ant-typography {
-  line-height: 15px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #424242;
-  margin-bottom: 20px;
-}
-.task_quizzes-page__yl65x .select-quizzes-card-wrapper .site-btn {
-  width: 100%;
-}
