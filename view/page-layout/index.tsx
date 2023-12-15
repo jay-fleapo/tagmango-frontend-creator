@@ -1,17 +1,14 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import type { MenuProps } from 'antd';
-import style from '../../../style/dashboard.module.scss';
+import style from '../../style/dashboard.module.scss';
 import { Layout, Space, Menu } from 'antd';
 import Link from 'next/link';
 
 const { Sider, Content } = Layout;
 
-import { FileOutlined, TeamOutlined, UserOutlined } from '@ant-design/icons';
+import { FileOutlined, UserOutlined } from '@ant-design/icons';
 import SubMenu from 'antd/es/menu/SubMenu';
-
-type MenuItem = Required<MenuProps>['items'][number];
 
 type ItemType = {
   key: string;
@@ -56,11 +53,11 @@ const items: ItemType[] = [
   },
 ];
 
-interface Props {
+interface LayoutProps {
   children: React.ReactNode;
 }
 
-export default function PageLayout(props: Props) {
+export const PageLayout = (props: LayoutProps) => {
   const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
   const currentPathname = usePathname();
 
@@ -123,4 +120,4 @@ export default function PageLayout(props: Props) {
       </div>
     </>
   );
-}
+};

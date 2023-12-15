@@ -11,7 +11,7 @@ import PageTitle from '../../../components/pagetitle';
 import { PrimaryCard } from '../../../components/common/card';
 import { CalendarTask } from '../../../view/tasks/calendar';
 import { TaskTable } from '../../../view/tasks/tasktable';
-import PageLayout from '../layout/page';
+import { PageLayout } from '../../../view/page-layout';
 
 const { TabPane } = Tabs;
 

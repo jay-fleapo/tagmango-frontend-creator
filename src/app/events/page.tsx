@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { Events } from '../../../view/events';
-import PageLayout from '../layout/page';
+import { PageLayout } from '../../../view/page-layout';
 
-export const EventsPage = () => {
+const EventsPage = () => {
   return (
     <>
       <PageLayout>

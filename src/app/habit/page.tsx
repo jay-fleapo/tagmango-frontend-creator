@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Habit } from '../../../view/habit';
-import PageLayout from '../layout/page';
+import { PageLayout } from '../../../view/page-layout';
 
 const HabitPage = () => {
   return (

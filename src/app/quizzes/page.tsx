@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Quizzes } from '../../../view/quizzes';
-import PageLayout from '../layout/page';
+import { PageLayout } from '../../../view/page-layout';
 
 const QuizzesPages = () => {
   return (

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { AddData } from '../../../../view/data/adddata';
-import PageLayout from '@/app/layout/page';
+import { PageLayout } from '../../../../view/page-layout';
 
 const AddDataPage = () => {
   return (
